@@ -15,10 +15,10 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     await conn.reply(m.chat, '*𝑬𝒏𝒗𝒊𝒂𝒏𝒅𝒐 𝒇𝒐𝒓𝒎𝒖𝒍𝒂𝒓𝒊𝒐..*',m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '𝑯𝒐𝒍𝒂, 𝒒𝒖𝒆 𝒕𝒂𝒍 :D', body: '𝑩𝒐𝒏𝒊𝒕𝒂 𝑱𝒐𝒓𝒏𝒂𝒅𝒂', sourceUrl: global.md, thumbnail: await (await fetch(pp)).buffer() }}})
 //m.react('🍓');
     await conn.sendMessage(m.chat, { react: { text: '🌸', key: m.key } })
-  let txt =`*🥀✿︎𝑻𝒉𝒆-𝑴𝒊𝒆𝑩𝒐𝒕-𝑴𝑫𝑽2 ✿︎🥀*
-➪ 𝑪𝒓𝒆𝒂𝒅𝒐𝒓𝒂: 𝑺𝒂𝒌𝒖𝒓𝒂-𝑶𝑭𝑪
-➪ 𝑵𝒖𝒎 𝒅𝒆 𝒍𝒂 𝒄𝒓𝒆𝒂𝒅𝒐𝒓𝒂 wa.me/595987138033
-➪ 𝑵𝒖𝒎 𝒅𝒆𝒍 𝑩𝒐𝒕 𝑶𝒇𝒊𝒄𝒊𝒂𝒍 wa.me/595982216131
+  let txt =`*🥀✿︎𝑺𝑯𝑨𝑫𝑶𝑾-𝑴𝑫 ✿︎🥀*
+➪ صاحب البوت: 𝑺𝑯𝑨𝑫𝑶𝑾
+➪ رقم البوت wa.me/994406674437
+➪ رقمي للتواصل wa.me/994409126126
 ➪ 𝑼𝒔𝒖𝒂𝒓𝒊𝒐: ${taguser}
 ➪ 𝑩𝒐𝒕: ${(conn.user.jid == global.conn.user.jid ? '' : `@${global.conn.user.jid.split`@`[0]}`) || '𝚂𝙾𝚈 𝚄𝙽 𝙱𝙾𝚃 𝙾𝙵𝙲'}
 ➪ 𝑭𝒆𝒄𝒉𝒂: ${date}
@@ -211,8 +211,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ┃📝 _${usedPrefix}novotar_
 ┃📝 _${usedPrefix}vervotos_
 ┃📝 _${usedPrefix}delvoto_
-╭━     *[ +18 ]*
-┃🔞➺ _${usedPrefix}hornymenu_
 ╭━     *[ 𝑪𝒐𝒏𝒗𝒆𝒓𝒕𝒊𝒅𝒐𝒓𝒆𝒔 ]*
 ┃🖼 _${usedPrefix}jpg *sticker*_
 ┃🖼 _${usedPrefix}toanime *foto*_
