@@ -4,24 +4,24 @@ const handler = async function(m, {conn, text, usedPrefix, command}) {
   const user = global.db.data.users[m.sender];
   const name2 = conn.getName(m.sender);
   const pp = await conn.profilePictureUrl(m.chat, 'image').catch((_) => global.imagen1);
-  if (user.registered === true) throw `👊😆Hᴇʏ Bᴇʙᴇ́ Yᴀ Esᴛᴀs Rᴇɢɪsᴛʀᴀᴅᴏ, Qᴜɪᴇʀᴇs Rᴇɢɪsᴛʀᴀᴛᴇ Dᴇ Nᴜᴇᴠᴏ?\n\n 📌Usᴇ Esᴛᴇ Cᴏᴍᴀɴᴅᴏ Pᴀʀᴀ Eʟɪᴍɪɴᴀʀ Sᴜ Rᴇɢɪsᴛʀᴏ\n*${usedPrefix}unreg* <Número de serie>`;
-  if (!Reg.test(text)) throw `*⚠️𝘌𝘭 𝘍𝘰𝘳𝘮𝘢𝘵𝘰 𝘌𝘴 𝘐𝘯𝘤𝘰𝘳𝘳𝘦𝘤𝘵𝘰*\n\n*🌴🪁 𝘜𝘴𝘰 𝘋𝘦𝘭 𝘊𝘰𝘮𝘢𝘯𝘥𝘰: ${usedPrefix + command} nombre.edad*\n*🌻🪁 Ejemplo: ${usedPrefix + command} Diego.20*`;
+  if (user.registered === true) throw `👊😆انت أصلاً مسجل, ولا عاوز تسجل تاني؟\n\n 📌لو هتسجل تاتي استخدم الأمر ده عشان تمسح التسجيل القديم\n*${usedPrefix}unreg* <Número de serie>`;
+  if (!Reg.test(text)) throw `*⚠️التنسيق غير صالح*\n\n*🌴🪁 استخدم الأمر: ${usedPrefix + command} الإسم.العمر*\n*🌻🪁 مثال: ${usedPrefix + command} shadow.19*`;
   let [_, name, splitter, age] = text.match(Reg);
-  if (!name) throw '*👊𝘋𝘦𝘷𝘦𝘴 𝘗𝘰𝘯𝘦𝘳 𝘌𝘭 𝘕𝘰𝘮𝘣𝘳𝘦*';
-  if (!age) throw '*[❗] 𝘓𝘢 𝘌𝘥𝘢𝘥 𝘌𝘴 𝘕𝘦𝘴𝘦𝘴𝘢𝘳𝘪𝘰 𝘗𝘢𝘳𝘢 𝘌𝘭 𝘙𝘦𝘨𝘪𝘴𝘵𝘳𝘰*';
-  if (name.length >= 30) throw '😆𝘞𝘰𝘰 𝘛𝘶 𝘕𝘰𝘮𝘣𝘳𝘦 𝘌𝘴 𝘓𝘢𝘳𝘨𝘰, 𝘜𝘴𝘢 𝘖𝘵𝘳𝘰';
+  if (!name) throw '*👊لازم تحط اسم*';
+  if (!age) throw '*[❗] لازم تحط عمر عشان التسجيل يتم*';
+  if (name.length >= 30) throw '😆الإسم اللي انت استخدمته أطول من اللازم ،،شوف إسم تاني';
   age = parseInt(age);
-  if (age > 60) throw '*[❗] 𝘞𝘩𝘢𝘵𝘴,𝘊𝘰𝘮𝘰 𝘝𝘪𝘷𝘦𝘴 𝘉𝘪𝘦𝘫𝘰? 👴🏻*';
-  if (age < 5) throw '*[❗] 𝘊𝘰𝘮𝘰 𝘘𝘶𝘦 𝘜𝘯 𝘉𝘦𝘣𝘦́ 𝘚𝘢𝘣𝘦 𝘜𝘴𝘢𝘳 𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱? 😲*';
+  if (age > 60) throw '*[❗] انت ازاي عايش؟👴🏻*';
+  if (age < 5) throw '*[❗] إزاي الطفل بيعرف يستخدم واتساب؟😲*';
   user.name = name.trim();
   user.age = age;
   user.regTime = + new Date;
   user.registered = true;
   const sn = createHash('md5').update(m.sender).digest('hex');
-  const caption = `╭━━━ • 𝘙𝘦𝘨𝘪𝘴𝘵𝘳𝘰⃨፝⃕✰• ━━━
-┃ *𝑁𝑜𝑚𝑏𝑟𝑒:* ${name}
-┃ *𝐸𝑑𝑎𝑑:* ${age} años
-┃ *𝑁𝑢𝑚𝑒𝑟𝑜 𝑑𝑒 𝑆𝑒𝑟𝑖𝑒:* 
+  const caption = `╭━━━ • تم التسجيل✰• ━━━
+┃ *الإسم:* ${name}
+┃ *العمر:* ${age} سنة
+┃ *معرف التسجيل:* 
 ┃ ${sn}
 ◈ ━━━━━━━ ⸙ ━━━━━━━ ◈`;
   // let author = global.author
@@ -32,5 +32,5 @@ const handler = async function(m, {conn, text, usedPrefix, command}) {
 };
 handler.help = ['verificar'];
 handler.tags = ['xp'];
-handler.command = /^(verify|register|verificar|reg|registrar)$/i;
+handler.command = /^(verify|register|سجل|verificar|reg|registrar)$/i;
 export default handler;
