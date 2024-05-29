@@ -8,8 +8,8 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 import { es } from "./lib/idiomas/total-idiomas.js"
 
-global.botnumber = "+201203970060" // Numero que se vera en la consola ej +595987138033
-global.confirmCode = "+201203970060"
+global.botnumber = "+967733576685" // Numero que se vera en la consola ej +595987138033
+global.confirmCode = "+967733576685"
 
 global.owner = [
  ['994406674437', '❤️ shadow 🤍', true], 
