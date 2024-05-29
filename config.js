@@ -8,11 +8,11 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 import { es } from "./lib/idiomas/total-idiomas.js"
 
-global.botnumber = "+994406674437" // Numero que se vera en la consola ej +595987138033
-global.confirmCode = "+994406674437"
+global.botnumber = "+201203970060" // Numero que se vera en la consola ej +595987138033
+global.confirmCode = "+201203970060"
 
 global.owner = [
- ['994406674437', '🌸 shadow 🌸', true], 
+ ['994406674437', '❤️ shadow 🤍', true], 
  ['994409126126', 'shadow', true],
  ['994406674437', 'ayanokoji', true]]
 
